@@ -4,13 +4,13 @@
     <Description>HAL Models for producing HAL Json</Description>
     <Copyright>Copyright 2016</Copyright>
     <VersionPrefix>2.3.0</VersionPrefix>
-    <Authors>CareerHub</Authors>
+    <Authors>CareerHub &amp; ColinM</Authors>
     <TargetFrameworks>net462;netstandard1.6</TargetFrameworks>
     <AssemblyName>Halcyon</AssemblyName>
-    <PackageId>Halcyon</PackageId>
+    <PackageId>ColinM.Halcyon</PackageId>
     <PackageTags>Hypermedia;ASP.NET;HAL;JSON;WebApi</PackageTags>
-    <PackageProjectUrl>https://github.com/visualeyes/halcyon</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/visualeyes/halcyon</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/ColinM9991/halcyon</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ColinM9991/halcyon</RepositoryUrl>
     <PackageTargetFallback Condition=" '$(TargetFramework)' == 'netstandard1.6' ">$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
     <NetStandardImplicitPackageVersion Condition=" '$(TargetFramework)' == 'netstandard1.6' ">1.6.0</NetStandardImplicitPackageVersion>
     <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
@@ -21,6 +21,8 @@
     <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
     <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
     <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>3.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
