@@ -59,16 +59,16 @@ namespace Halcyon.HAL {
         [JsonProperty("hreflang", NullValueHandling = NullValueHandling.Ignore)]
         public string HrefLang { get; set; }
 
-        internal Link CreateLink(IDictionary<string, object> parameters) {
+        internal Link CreateLink(IDictionary<string, object> parameters, bool caseInsensitiveParameterNames) {
             var clone = Clone();
 
             if(replaceParameters && parameters != null) {
                 if(!String.IsNullOrWhiteSpace(clone.Href)) {
-                    clone.Href = clone.Href.SubstituteParams(parameters);
+                    clone.Href = clone.Href.SubstituteParams(parameters, caseInsensitiveParameterNames);
                 }
 
                 if(!String.IsNullOrWhiteSpace(clone.Title)) {
-                    clone.Title = clone.Title.SubstituteParams(parameters);
+                    clone.Title = clone.Title.SubstituteParams(parameters, caseInsensitiveParameterNames);
                 }
             }
 

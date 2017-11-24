@@ -6,5 +6,6 @@ namespace Halcyon.HAL {
     public class HALModelConfig : IHALModelConfig {
         public string LinkBase { get; set; }
         public bool ForceHAL { get; set; }
+        public bool CaseInsensitiveParameterNames { get; set; }
     }
 }

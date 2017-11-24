@@ -124,11 +124,11 @@ namespace Halcyon.HAL {
             return output;
         }
 
-        private static Dictionary<string, object> GetResolvedLinks(IEnumerable<Link> links, IDictionary<string, object> properties, string linkBase) {
+        private Dictionary<string, object> GetResolvedLinks(IEnumerable<Link> links, IDictionary<string, object> properties, string linkBase) {
             var subsituted = links;
 
             if(properties.Any()) {
-                subsituted = links.Select(l => l.CreateLink(properties)).ToList();
+                subsituted = links.Select(l => l.CreateLink(properties, config.CaseInsensitiveParameterNames)).ToList();
             }
 
             var resolved = subsituted;

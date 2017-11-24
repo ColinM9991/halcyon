@@ -2,5 +2,6 @@
     public interface IHALModelConfig {
         string LinkBase { get;  }
         bool ForceHAL { get; }
+        bool CaseInsensitiveParameterNames { get; }
     }
 }

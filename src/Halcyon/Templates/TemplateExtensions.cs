@@ -8,8 +8,8 @@ using Tavis.UriTemplates;
 namespace Halcyon.Templates {
     public static class TemplateExtensions {
 
-        public static string SubstituteParams(this string uriTemplateString, IDictionary<string, object> parameters) {
-            var uriTemplate = new UriTemplate(uriTemplateString);
+        public static string SubstituteParams(this string uriTemplateString, IDictionary<string, object> parameters, bool caseInsensitiveParameterNames = false) {
+            var uriTemplate = new UriTemplate(uriTemplateString, caseInsensitiveParameterNames: caseInsensitiveParameterNames);
 
             foreach(var parameter in parameters) {
                 var name = parameter.Key;

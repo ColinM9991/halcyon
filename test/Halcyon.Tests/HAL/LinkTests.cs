@@ -55,12 +55,15 @@ namespace Halcyon.Tests.HAL {
         }
         
         [Theory]
-        [InlineData(null, null, null, null, null, true)]
-        [InlineData("", "", "", "", null, true)]
-        [InlineData("href/{one}", "href/1", "book-{one}", "book-1", null, true)]
-        [InlineData("href/{one}", "href/{one}", "book-{one}", "book-{one}", true, false)]
-        [InlineData("href/{two}", "href/", "book-{two}", "book-", null, true)]
-        public void Create_Link(string href, string expectedHref, string title, string expectedTitle, bool? isTemplated, bool replaceParameters) {
+        [InlineData(null, null, null, null, null, true, false)]
+        [InlineData("", "", "", "", null, true, false)]
+        [InlineData("href/{one}", "href/1", "book-{one}", "book-1", null, true, false)]
+        [InlineData("href/{one}", "href/{one}", "book-{one}", "book-{one}", true, false, false)]
+        [InlineData("href/{two}", "href/", "book-{two}", "book-", null, true, false)]
+        [InlineData("href/{One}", "href/1", "book-{one}", "book-1", null, true, true)]
+        [InlineData("href/{One}", "href/{One}", "book-{one}", "book-{one}", true, false, true)]
+        [InlineData("href/{Two}", "href/", "book-{two}", "book-", null, true, true)]
+        public void Create_Link(string href, string expectedHref, string title, string expectedTitle, bool? isTemplated, bool replaceParameters, bool caseInsensitiveParameterNames) {
             var parameters = new Dictionary<string, object> {
                 { "one", 1 }
             };
@@ -72,7 +75,7 @@ namespace Halcyon.Tests.HAL {
                 replaceParameters: replaceParameters
             );
 
-            var templatedLink = link.CreateLink(parameters);
+            var templatedLink = link.CreateLink(parameters, caseInsensitiveParameterNames);
 
             Assert.Equal(expectedHref, templatedLink.Href);
             Assert.Equal(expectedTitle, templatedLink.Title);
