@@ -34,9 +34,9 @@ For more info you can read the [blog post](https://medium.com/@johncmckim/halcyo
 
 **Getting Halcyon**
 
-For ASP.NET 4.5 - `Install-Package Halcyon.WebApi`
+For ASP.NET 4.6.2 - `Install-Package Halcyon.WebApi`
 
-If you are using ASP.NET Core - `Install-Package Halcyon.Mvc -Pre`
+If you are using ASP.NET Core - `Install-Package Halcyon.Mvc`
 
 **Using Halcyon**
 
