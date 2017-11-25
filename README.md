@@ -3,16 +3,13 @@
 [![Coverage Status](https://coveralls.io/repos/visualeyes/halcyon/badge.svg?branch=master&service=github)](https://coveralls.io/github/visualeyes/halcyon?branch=master)
 
 **Halcyon** - 
-[![Halcyon Nuget Version](https://img.shields.io/nuget/v/Halcyon.svg)](https://www.nuget.org/packages/Halcyon/) 
-[![Halcyon Nuget Version](https://img.shields.io/nuget/vpre/Halcyon.svg)](https://www.nuget.org/packages/Halcyon/) 
+[![Halcyon Nuget Version](https://img.shields.io/nuget/v/ColinM.Halcyon.svg)](https://www.nuget.org/packages/ColinM.Halcyon/) 
 
 **Halcyon.WebApi** *(ASP.NET Web API)* - 
-[![Halcyon.WebApi Nuget Version](https://img.shields.io/nuget/v/Halcyon.WebApi.svg)](https://www.nuget.org/packages/Halcyon.WebApi/)
-[![Halcyon.WebApi Nuget Version](https://img.shields.io/nuget/vpre/Halcyon.WebApi.svg)](https://www.nuget.org/packages/Halcyon.WebApi/)
+[![Halcyon.WebApi Nuget Version](https://img.shields.io/nuget/v/ColinM.Halcyon.WebApi.svg)](https://www.nuget.org/packages/ColinM.Halcyon.WebApi/)
 
 **Halcyon.Mvc** *(ASP.NET Core)* -
-[![Halcyon.WebApi Nuget Version](https://img.shields.io/nuget/v/Halcyon.Mvc.svg)](https://www.nuget.org/packages/Halcyon.Mvc/)
-[![Halcyon.WebApi Nuget Version](https://img.shields.io/nuget/vpre/Halcyon.Mvc.svg)](https://www.nuget.org/packages/Halcyon.Mvc/)
+[![Halcyon.WebApi Nuget Version](https://img.shields.io/nuget/v/ColinM.Halcyon.Mvc.svg)](https://www.nuget.org/packages/ColinM.Halcyon.Mvc/)
 
 
 A HAL implementation for ASP.NET. Halcyon builds a HAL Model and lets ASP.NET take care of formatting the model into JSON.
@@ -37,9 +34,9 @@ For more info you can read the [blog post](https://medium.com/@johncmckim/halcyo
 
 **Getting Halcyon**
 
-For ASP.NET 4.5 - `Install-Package Halcyon.WebApi`
+For ASP.NET 4.6.2 - `Install-Package Halcyon.WebApi`
 
-If you are using ASP.NET Core - `Install-Package Halcyon.Mvc -Pre`
+If you are using ASP.NET Core - `Install-Package Halcyon.Mvc`
 
 **Using Halcyon**
 
